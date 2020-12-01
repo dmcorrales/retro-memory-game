@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgmain"
+    tools:context="co.edu.uelboesque.memory.GameActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="112dp"
+        android:id="@+id/constraintLayout"
+        app:layout_constraintRight_toLeftOf="@+id/gridLayout1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gridLayout1"
+        android:layout_marginEnd="7dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="-1dp"
+        app:layout_constraintLeft_toLeftOf="@+id/layoutCanvas"
+        app:layout_constraintHorizontal_bias="0.0">
+
+        <Button
+            android:id="@+id/right"
+            style="@android:style/Widget.Material.Light.Button.Inset"
+
+            android:layout_width="49dp"
+
+            android:layout_height="104dp"
+            android:layout_marginStart="7dp"
+            android:drawableTop="@drawable/derecha"
+            android:text="R"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/down"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/up"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1"
+            android:layout_marginTop="-8dp" />
+
+        <Button
+            android:id="@+id/up"
+            style="@android:style/Widget.Material.Light.Button.Inset"
+            android:layout_width="88dp"
+            android:layout_height="52dp"
+            android:drawableLeft="@drawable/arriba"
+            android:text="U"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1"
+            android:layout_marginTop="0dp" />
+
+        <Button
+            android:id="@+id/down"
+            style="@android:style/Widget.Material.Light.Button.Inset"
+            android:layout_width="88dp"
+            android:layout_height="52dp"
+            android:drawableLeft="@drawable/abajo"
+            android:text="D"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/up"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <Button
+            android:id="@+id/left"
+            style="@android:style/Widget.Material.Light.Button.Inset"
+            android:layout_width="48dp"
+            android:layout_height="98dp"
+            android:layout_marginEnd="75dp"
+            android:drawableTop="@drawable/izquierda"
+            android:text="L"
+            app:layout_constraintBottom_toBottomOf="@+id/up"
+            app:layout_constraintHorizontal_bias="0.271"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/down"
+            app:layout_constraintTop_toBottomOf="@+id/up"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1"
+            app:layout_constraintVertical_bias="0.459" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <GridLayout
+        android:id="@+id/gridLayout1"
+        android:layout_width="0dp"
+        android:layout_height="161dp"
+        android:columnCount="2"
+        android:rowCount="4"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnOperaciones"
+            style="@android:style/Widget.Holo.Button.Small"
+            android:layout_width="68dp"
+            android:layout_height="37dp"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:text="SAVE" />
+
+        <Button
+            android:id="@+id/btnAccion"
+            style="@android:style/Widget.Holo.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:text="START"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="60dp"
+            android:layout_height="29dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:text="Tiempo:"
+            app:layout_constraintBaseline_toBaselineOf="@+id/chronometer3"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/chronometer3"
+            tools:layout_constraintBaseline_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:text="Juego:" />
+
+        <Chronometer
+            android:id="@+id/chronometer3"
+            android:layout_width="60dp"
+            android:layout_height="26dp"
+            android:layout_column="1"
+            android:layout_row="1" />
+
+        <Button
+            android:id="@+id/btnPintar"
+            style="@android:style/Widget.Material.Light.Button.Inset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:text="PINTAR"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <Button
+            android:id="@+id/btnComprobar"
+            style="@android:style/Widget.Material.Light.Button.Inset"
+            android:layout_width="68dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:drawableLeft="@drawable/nivel"
+            android:text="I/F" />
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutCanvas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="1.0"></LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
